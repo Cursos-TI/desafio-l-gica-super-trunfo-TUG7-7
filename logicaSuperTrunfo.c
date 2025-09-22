@@ -96,14 +96,17 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    int vencedor = 0; // 0 = empate, 1 = carta1, 2 = carta2
+
 // -------- Exibição dos Resultados --------
-    if (vencedor == 0) {
-        printf("Resultado final: Empate!\n");
-    } else if (vencedor == 1) {
-        printf("A cidade vencedora é: %s (Atributo: PIB per capita)\n", nomeCidade1);
-    } else {
-        printf("A cidade vencedora é: %s (Atributo: PIB per capita)\n", nomeCidade2);
-    }
+ if (pibPerCapita1 > pibPerCapita2) {
+    vencedor = 1;
+} else if (pibPerCapita2 > pibPerCapita1) {
+    vencedor = 2;
+} else {
+    vencedor = 0;
+}
+
 
     
     return 0;
