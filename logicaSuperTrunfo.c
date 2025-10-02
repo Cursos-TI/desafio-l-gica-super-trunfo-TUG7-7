@@ -42,9 +42,10 @@ int main() {
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontosTuristicos1);
 
-    densidade1 = populacao1 / area1;
-    pibPerCapita1 = pib1 / populacao1;
+     densidade1 = (float)populacao1 / area1;
+    pibPerCapita1 = pib1 / (float)populacao1;
 
+   
      // -------- Cadastro da Carta 2 --------
     printf("\nCadastro da Carta 2:\n");
     printf("Digite o estado: ");
@@ -62,8 +63,8 @@ int main() {
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontosTuristicos2);
 
-    densidade2 = populacao2 / area2;
-    pibPerCapita2 = pib2 / populacao2;
+ densidade2 = (float)populacao2 / area2;
+    pibPerCapita2 = pib2 / (float)populacao2;
 
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
