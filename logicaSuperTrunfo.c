@@ -84,6 +84,7 @@ int main() {
     printf("2 - area\n");
     printf("3 - pib\n");
     printf("4 - pontosTuristicos\n");
+    printf("5 - Densidade Demografica\n");
     printf("Escolha um atributo para comparar: ");
     scanf("%d", &opcao);
 
@@ -116,7 +117,11 @@ int main() {
             else if (pontosTuristicos2 > pontosTuristicos1) vencedor = 2;
             break;
 
-    
+     case 5: // Densidade (regra invertida → vence menor valor)
+            printf("Densidade Demografica: %s = %.2f | %s = %.2f\n", nomeCidade1, densidade1, nomeCidade2, densidade2);
+            if (densidade1 < densidade2) vencedor = 1;
+            else if (densidade2 < densidade1) vencedor = 2;
+            break;
 
         default:
             printf("Opcao invalida!\n");
