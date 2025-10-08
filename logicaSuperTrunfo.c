@@ -76,14 +76,14 @@ int main() {
     // } else {
     //     printf("Cidade 2 tem maior população.\n");
     // }
+
      // -------- Menu Interativo --------
     int opcao;
     printf("\n===== MENU DE COMPARACAO =====\n");
-    printf("1 - Populacao\n");
-    printf("2 - Area\n");
-    printf("3 - PIB\n");
-    printf("4 - Pontos Turisticos\n");
-    printf("5 - Densidade Demografica\n");
+    printf("1 - populacao\n");
+    printf("2 - area\n");
+    printf("3 - pib\n");
+    printf("4 - pontosTuristicos\n");
     printf("Escolha um atributo para comparar: ");
     scanf("%d", &opcao);
 
@@ -116,11 +116,7 @@ int main() {
             else if (pontosTuristicos2 > pontosTuristicos1) vencedor = 2;
             break;
 
-        case 5: // Densidade (regra invertida → vence menor valor)
-            printf("Densidade Demografica: %s = %.2f | %s = %.2f\n", nomeCidade1, densidade1, nomeCidade2, densidade2);
-            if (densidade1 < densidade2) vencedor = 1;
-            else if (densidade2 < densidade1) vencedor = 2;
-            break;
+    
 
         default:
             printf("Opcao invalida!\n");
@@ -133,7 +129,7 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-    int vencedor = 0; // 0 = empate, 1 = carta1, 2 = carta2
+   
 
 // -------- Exibição dos Resultados --------
     if (vencedor == 1) {
